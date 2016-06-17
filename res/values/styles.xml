@@ -1,0 +1,61 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="basic_theme" parent="android:Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    
+    <style name="theme_holo" parent="android:Theme.Holo">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    
+    <style name="SwitchTextAppearanceWhite" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+    
+    <style name="SwitchTextAppearanceRed" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textColor">@color/peach</item>
+    </style>
+    
+    <style name="SwitchTextAppearanceOrange" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textColor">@color/light_orange</item>
+    </style>
+    
+    <style name="SwitchTextAppearanceYellow" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textColor">@color/light_yellow</item>
+    </style>
+    
+    <style name="SwitchTextAppearanceGreen" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textColor">@color/light_green</item>
+    </style>
+    
+    <style name="SwitchTextAppearanceBlue" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textColor">@color/light_blue</item>
+    </style>
+    
+    <style name="SwitchTextAppearancePurple" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textColor">@color/light_purple</item>
+    </style>
+    
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <Button
+        android:id="@+id/drivercambtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/maindashbtn"
+        android:layout_below="@+id/maindashbtn"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/selected_blue"
+        android:enabled="false"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/driver_cam"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/settingsbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/maindashbtn"
+        android:layout_below="@+id/drivercambtn"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/unselected_blue"
+        android:enabled="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/settings_tab"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/maindashbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/unselected_blue"
+        android:enabled="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/main_dash"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black" />
+
+    <SurfaceView
+        android:id="@+id/cam_preview"
+        android:layout_width="800dp"
+        android:layout_height="500dp"
+        android:layout_alignTop="@+id/maindashbtn"
+        android:layout_marginLeft="145dp"
+        android:layout_toRightOf="@+id/maindashbtn" />
+
+    <Button
+        android:id="@+id/takepicturebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cam_preview"
+        android:layout_below="@+id/cam_preview"
+        android:layout_marginLeft="340dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_selector_blue"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black" />
+
+    <Switch
+        android:id="@+id/camera_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/takepicturebtn"
+        android:layout_alignBottom="@+id/takepicturebtn"
+        android:layout_marginLeft="125dp"
+        android:layout_toRightOf="@+id/takepicturebtn"
+        android:switchTextAppearance="@style/SwitchTextAppearanceBlue"
+        android:textOff="@string/switch_photo"
+        android:textOn="@string/switch_video"
+        android:thumb="@drawable/switch_thumb" />
+
+    <TextView
+        android:id="@+id/video_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/takepicturebtn"
+        android:layout_toLeftOf="@+id/takepicturebtn"
+        android:layout_marginRight="-200dp"
+        android:textColor="@color/light_blue"
+        android:textSize="20sp" />
+    
+    <Chronometer 
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:id="@+id/chrono_drivercam_video"
+    	android:visibility="gone"/>
+    
+    <Chronometer 
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:id="@+id/chrono_drivercam_main"
+    	android:visibility="gone"/>
+    
+</RelativeLayout>

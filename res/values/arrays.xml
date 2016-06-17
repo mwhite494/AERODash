@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listUnits">
+        <item>mph</item>
+        <item>km/h</item>
+    </string-array>
+    <string-array name="listUnitsReturnValue">
+        <item>mph</item>
+        <item>km/h</item>
+    </string-array>
+</resources>

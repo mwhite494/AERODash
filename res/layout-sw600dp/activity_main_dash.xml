@@ -1,0 +1,220 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainDash" >
+
+    <Button
+        android:id="@+id/drivercambtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/maindashbtn"
+        android:layout_below="@+id/maindashbtn"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/unselected_blue"
+        android:enabled="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/driver_cam" />
+
+    <Button
+        android:id="@+id/settingsbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/maindashbtn"
+        android:layout_below="@+id/drivercambtn"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/unselected_blue"
+        android:enabled="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/settings_tab" />
+
+    <Button
+        android:id="@+id/maindashbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selected_blue"
+        android:enabled="false"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/main_dash"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/speedometer"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/maindashbtn"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/drivercambtn"
+        android:textSize="200sp"
+        android:gravity="right"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:id="@+id/speedunit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/speedometer"
+        android:layout_alignBottom="@+id/speedometer"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/speedometer"
+        android:textSize="75sp"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:id="@+id/averagespeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/maxspeed"
+        android:layout_alignBottom="@+id/maxspeed"
+        android:layout_marginLeft="150dp"
+        android:layout_toRightOf="@+id/maxspeed"
+        android:text="@string/avgspd"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:id="@+id/maxspeedoutput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/maxspeed"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/averagespeed"
+        android:textSize="25sp"
+        android:gravity="right"
+        android:textColor="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/averagespeedoutput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/maxspeedoutput"
+        android:layout_alignBottom="@+id/maxspeedoutput"
+        android:layout_alignRight="@+id/averagespeed"
+        android:textSize="25sp"
+        android:gravity="right"
+        android:textColor="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/dist_traveled_output"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/dist_traveled"
+        android:layout_below="@+id/dist_traveled"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:gravity="right"
+        android:textColor="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/elapsedtimeoutput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dist_traveled_output"
+        android:layout_alignRight="@+id/elapsedtime"
+        android:textSize="25sp"
+        android:gravity="right"
+        android:textColor="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/elapsedtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dist_traveled_output"
+        android:layout_alignRight="@+id/averagespeedoutput"
+        android:text="@string/elaptime"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:id="@+id/dist_traveled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/maxspeedoutput"
+        android:layout_marginTop="50dp"
+        android:layout_toLeftOf="@+id/averagespeed"
+        android:text="@string/disttrav"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:id="@+id/maxspeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/speedometer"
+        android:layout_below="@+id/settingsbtn"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/maxspd"
+        android:textColor="@color/blue"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/resetbtn"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/elapsedtime"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/elapsedtime"
+        android:text="@string/resetbtn"
+        android:background="@drawable/button_selector_blue" />
+    
+    <Chronometer 
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:id="@+id/chrono_main"
+    	android:visibility="gone"/>
+    
+    <!-- Dummy surface view that holds the camera preview, its hidden behind the reset button -->
+    <SurfaceView
+        android:id="@+id/cam_preview"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignBaseline="@+id/resetbtn"
+        android:layout_alignBottom="@+id/resetbtn"
+        android:layout_alignRight="@+id/resetbtn"
+        android:layout_marginRight="27dp" />
+    
+    <TextView
+        android:id="@+id/drivercam_video_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/drivercam_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/speedometer"
+        android:layout_toLeftOf="@+id/cam_preview"
+        android:textColor="@color/light_blue"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text_main_video_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/drivercam_status"
+        android:layout_below="@+id/drivercam_status"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/light_blue"
+        android:textSize="20sp" />
+    
+    <Chronometer 
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:id="@+id/chrono_main_video_timer"
+    	android:visibility="gone" />
+
+</RelativeLayout>

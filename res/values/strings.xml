@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AERO Dash</string>
+    <string name="action_settings">Settings</string>
+    <string name="main_dash">Main Dash</string>
+    <string name="driver_cam">Driver Cam</string>
+    <string name="settings_tab">Settings</string>
+    <string name="englishspeed">mph</string>
+    <string name="metricspeed">km/h</string>
+    <string name="maxspd">Max Speed</string>
+    <string name="avgspd">Average Speed</string>
+    <string name="disttrav">Distance Traveled</string>
+    <string name="elaptime">Elapsed Time</string>
+    <string name="resetbtn">Reset</string>
+    <!-- The "\u0020" is a unicode charater for a white space or " ".
+    XML files do not recognize white space before the start of or after the finish of a sentence -->
+    <string name="switch_photo">Photo</string>
+    <string name="switch_video">Video</string>
+    <string name="speed_measure">Speed is measured in</string>
+    <string name="picture_setting">Take picture when</string>
+    <string name="video_setting">Record video when</string>
+    <string name="video_setting_sec">second(s)</string>
+    <string name="video_setting_min">minute(s)</string>
+    <string name="misc_settings">Misc Settings</string>
+    <string name="color_scheme">Color Scheme:</string>
+    <string name="str_everything">Everything\u0020</string>
+    <string name="str_aero">AE*RO</string>
+    <string name="str_font">\u0020font</string>
+    <string name="restore_default">Restore Default</string>
+    <string-array name="speed_units">
+        <item>\u0020\u0020\u0020mph</item>
+        <item>\u0020\u0020\u0020km/h</item>
+    </string-array>
+
+</resources>

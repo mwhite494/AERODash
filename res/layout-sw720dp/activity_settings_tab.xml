@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+    
+    <Button
+        android:id="@+id/drivercambtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/maindashbtn"
+        android:layout_below="@+id/maindashbtn"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/unselected_blue"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/driver_cam"
+        android:enabled="true" />
+    
+    <Button
+        android:id="@+id/settingsbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/maindashbtn"
+        android:layout_below="@+id/drivercambtn"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/selected_blue"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/settings_tab"
+        android:enabled="false"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/maindashbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/unselected_blue"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/main_dash"
+        android:enabled="true" />
+
+    <TextView
+        android:id="@+id/settings_main_dash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/maindashbtn"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/maindashbtn"
+        android:text="@string/main_dash"
+        android:textSize="25sp"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:id="@+id/speed_measure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/settings_main_dash"
+        android:layout_below="@+id/settings_main_dash"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:text="@string/speed_measure"
+        android:textColor="@color/light_blue"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/settings_driver_cam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/settings_main_dash"
+        android:layout_below="@+id/speed_measure"
+        android:layout_marginTop="30dp"
+        android:text="@string/driver_cam"
+        android:textColor="@color/blue"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/picture_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settings_driver_cam"
+        android:layout_marginTop="20sp"
+        android:layout_toRightOf="@+id/check_picture_setting"
+        android:layout_marginLeft="5dp"
+        android:text="@string/picture_setting"
+        android:textSize="20sp"
+        android:textColor="@color/light_blue" />
+
+    <!-- Dummy item to prevent the EditText fields from automattically recieving focus -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/linearlayout_focus"
+    	android:focusable="true"
+    	android:focusableInTouchMode="true"
+    	android:layout_width="0px"
+    	android:layout_height="0px"
+        />
+    
+    <EditText
+        android:id="@+id/picture_setting_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/picture_setting"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/picture_setting"
+        android:ems="3"
+        android:maxLength="3"
+        android:textSize="20sp"
+        android:inputType="number"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@drawable/edit_text_selector_blue"
+        android:imeOptions="actionDone" />
+
+    <TextView
+        android:id="@+id/picture_setting_measure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/picture_setting"
+        android:layout_toRightOf="@+id/picture_setting_edit"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/light_blue" />
+
+    <EditText
+        android:id="@+id/video_setting_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/picture_setting_edit"
+        android:layout_alignBaseline="@+id/video_setting"
+        android:textSize="20sp"
+        android:ems="3"
+        android:maxLength="3"
+        android:inputType="number"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@drawable/edit_text_selector_blue"
+        android:imeOptions="actionDone" />
+
+    <TextView
+        android:id="@+id/video_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/picture_setting"
+        android:layout_below="@+id/picture_setting"
+        android:layout_marginTop="50dp"
+        android:text="@string/video_setting"
+        android:textColor="@color/light_blue"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/video_setting_measure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/video_setting"
+        android:layout_alignLeft="@+id/picture_setting_measure"
+        android:textSize="20sp"
+        android:textColor="@color/light_blue" />
+
+    <EditText
+        android:id="@+id/video_setting_time_min"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_above="@+id/video_setting_measure"
+        android:layout_marginBottom="-5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/video_setting_measure"
+        android:textSize="20sp"
+        android:ems="2"
+        android:maxLength="2"
+        android:inputType="number"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@drawable/edit_text_selector_blue"
+        android:imeOptions="actionDone" />
+
+    <TextView
+        android:id="@+id/video_setting_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/video_setting_time_min"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/video_setting_time_min"
+        android:textSize="20sp"
+        android:textColor="@color/light_blue"
+        android:text="@string/video_setting_min" />
+
+    <EditText
+        android:id="@+id/video_setting_time_sec"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/video_setting_time_min"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@+id/video_setting_time_min"
+        android:textSize="20sp"
+        android:ems="2"
+        android:inputType="number"
+        android:gravity="center_horizontal|center_vertical"
+        android:maxLength="2"
+        android:background="@drawable/edit_text_selector_blue"
+        android:imeOptions="actionDone" />
+
+    <TextView
+        android:id="@+id/video_setting_sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/video_setting_time_sec"
+        android:layout_alignBottom="@+id/video_setting_time_sec"
+        android:layout_alignLeft="@+id/video_setting_min"
+        android:textSize="20sp"
+        android:textColor="@color/light_blue"
+        android:text="@string/video_setting_sec" />
+
+    <TextView
+        android:id="@+id/settings_misc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/settings_driver_cam"
+        android:layout_below="@+id/video_setting_time_sec"
+        android:layout_marginTop="-5dp"
+        android:textSize="25sp"
+        android:textColor="@color/blue"
+        android:text="@string/misc_settings" />
+
+    <Spinner
+        android:id="@+id/speed_measure_spinner"
+        android:layout_width="92dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/settings_main_dash"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/speed_measure"
+        android:background="@drawable/spinner_selector_blue" />
+
+    <TextView
+        android:id="@+id/color_scheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/check_video_setting"
+        android:layout_below="@+id/settings_misc"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/light_blue"
+        android:text="@string/color_scheme" />
+
+    <CheckBox
+        android:id="@+id/everything_aero_font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/color_scheme"
+        android:layout_below="@+id/color_scheme"
+        android:layout_marginTop="20dp"
+        android:button="@drawable/check_box_selector_blue"
+        android:onClick="onCheckboxClicked" />
+
+    <TextView
+        android:id="@+id/txt_everything"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/everything_aero_font"
+        android:layout_toRightOf="@+id/everything_aero_font"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="20sp"
+        android:textColor="@color/light_blue"
+        android:text="@string/str_everything" />
+
+    <TextView
+        android:id="@+id/txt_aero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_everything"
+        android:layout_toRightOf="@+id/txt_everything"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="@string/str_aero" />
+
+    <TextView
+        android:id="@+id/txt_font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_aero"
+        android:layout_toRightOf="@+id/txt_aero"
+        android:textSize="20sp"
+        android:textColor="@color/light_blue"
+        android:text="@string/str_font" />
+
+    <Button
+        android:id="@+id/restore_default_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="175dp"
+        android:layout_toRightOf="@+id/settingsbtn"
+        android:layout_marginLeft="325dp"
+        android:background="@drawable/button_selector_blue"
+        android:text="@string/restore_default" />
+
+    <CheckBox
+        android:id="@+id/check_picture_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/speed_measure"
+        android:layout_below="@+id/settings_driver_cam"
+        android:layout_marginTop="15dp"
+        android:button="@drawable/check_box_selector_blue"
+        android:onClick="onCheckboxClicked" />
+
+    <CheckBox
+        android:id="@+id/check_video_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/check_picture_setting"
+        android:layout_below="@+id/check_picture_setting"
+        android:layout_marginTop="40dp"
+        android:layout_toLeftOf="@+id/video_setting"
+        android:button="@drawable/check_box_selector_blue"
+        android:onClick="onCheckboxClicked" />
+    
+    <Chronometer 
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:id="@+id/chrono_settings"
+    	android:visibility="gone"/>
+
+    <RadioGroup android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settings_misc"
+        android:layout_toRightOf="@+id/color_scheme"
+        android:orientation="horizontal"
+		android:id="@+id/color_scheme_group">
+    
+    	<RadioButton
+        	android:id="@+id/white_button"
+        	android:layout_width="57dp"
+        	android:layout_height="wrap_content"    	
+        	android:layout_marginTop="5dp"        	
+        	android:layout_marginLeft="15dp"
+        	android:button="@drawable/white_button_selector" />
+
+    	<RadioButton
+        	android:id="@+id/red_button"
+        	android:layout_width="57dp"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="5dp"
+        	android:layout_marginLeft="10dp"
+        	android:button="@drawable/red_button_selector" />
+
+    	<RadioButton
+        	android:id="@+id/orange_button"
+        	android:layout_width="57dp"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="5dp"
+        	android:layout_marginLeft="10dp"
+        	android:button="@drawable/orange_button_selector" />
+    
+    	<RadioButton
+        	android:id="@+id/yellow_button"
+        	android:layout_width="57dp"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="5dp"
+        	android:layout_marginLeft="10dp"
+        	android:button="@drawable/yellow_button_selector" />
+    
+    	<RadioButton
+        	android:id="@+id/green_button"
+        	android:layout_width="57dp"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="5dp"
+        	android:layout_marginLeft="10dp"
+        	android:button="@drawable/green_button_selector" />
+    
+    	<RadioButton
+        	android:id="@+id/blue_button"
+        	android:layout_width="57dp"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="5dp"
+        	android:layout_marginLeft="10dp"
+        	android:button="@drawable/blue_button_selector" />
+    
+    	<RadioButton
+        	android:id="@+id/purple_button"
+        	android:layout_width="57dp"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="5dp"
+        	android:layout_marginLeft="10dp"
+        	android:button="@drawable/purple_button_selector" />
+    
+    </RadioGroup>
+    
+</RelativeLayout>
